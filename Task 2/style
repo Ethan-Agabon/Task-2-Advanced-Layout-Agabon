@@ -1,0 +1,226 @@
+/* ----------------------------------
+ * 1. CSS Variables and Base Styles
+ * ---------------------------------- */
+
+:root {
+    /* Updated watch.it Brand Colors */
+    --color-primary: #ff06fe; /* Vibrant Magenta/Pink for accent (Buttons, Logo) */
+    --color-background: #0e0326; /* Very Dark Purple/Black for Body */
+    --color-card-background: #310072; /* Deep Purple for Movie Cards/Header */
+    --color-text: #ffffff; /* White */
+    --color-secondary-text: #6701fc; /* Vibrant Purple for secondary text/info */
+    
+    /* Specification 2: Standard Spacing Values (Mobile Defaults) */
+    --small-space: 16px;
+    --large-space: 16px; 
+    --border-radius: 4px; /* Specification 2.4: Buttons use border radius */
+
+    /* Specification 4.1: Typography */
+    --font-heading: 'Teko', sans-serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    /* Color Update: Body Background */
+    background-color: var(--color-background);
+    line-height: 1.4;
+}
+
+/* Specification 4.1: Headings and buttons must use "Teko" font family */
+h1, h2, h3, button {
+    font-family: var(--font-heading);
+    color: var(--color-text);
+    text-transform: uppercase;
+}
+
+/* ----------------------------------
+ * 2. Main Layout and Container
+ * ---------------------------------- */
+
+.container {
+    /* Specification 3: max-width 900px */
+    max-width: 900px;
+    margin: 0 auto; 
+    /* Specification 2.1: Main content container should use large spacing for padding */
+    padding: var(--large-space); 
+}
+
+h2 {
+    font-size: 3em;
+    margin-bottom: var(--large-space);
+}
+
+/* ----------------------------------
+ * 3. Header Styles 
+ * ---------------------------------- */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Specification 2.3: Header uses small spacing elsewhere */
+    padding: var(--small-space) var(--large-space); 
+    /* Using a solid version of the dark purple for the header bar */
+    background: var(--color-card-background); 
+    /* Color Update: Primary Accent for border */
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.header-logo {
+    /* Specification 4.2 (Mobile size) */
+    font-size: 2em; 
+    /* Color Update: Primary Accent for logo */
+    color: var(--color-primary);
+}
+
+.header-nav {
+    /* Hidden on Mobile (as per wireframe) */
+    display: none; 
+}
+
+.header-cta {
+    /* Specification 4.3: Button font size: 2em */
+    font-size: 2em; 
+    /* Specification 2.4: Buttons use small spacing for padding */
+    padding: 0.25em 0.5em; 
+    /* Color Update: Primary Accent for CTA background */
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    white-space: nowrap; 
+}
+
+/* ----------------------------------
+ * 4. Movie Grid and Card Styles 
+ * ---------------------------------- */
+
+.movie-grid {
+    /* Mobile: Single column grid, gap uses large spacing */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--large-space); 
+}
+
+.movie-card {
+    /* Specification 2.2: Movie content boxes use small spacing */
+    /* Color Update: Card Background */
+    background-color: var(--color-card-background);
+    padding: var(--small-space);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.movie-poster {
+    width: 100%;
+    height: auto; 
+    max-height: 250px;
+    object-fit: cover;
+    margin-bottom: var(--small-space);
+    border-radius: var(--border-radius);
+}
+
+.movie-title {
+    /* Specification 4.4: Movie container font size: 1.5em */
+    font-size: 1.5em; 
+    margin-bottom: 0.25em;
+}
+
+.movie-info {
+    /* Color Update: Secondary Accent for info text */
+    color: var(--color-secondary-text);
+    margin-bottom: var(--small-space);
+}
+
+.movie-description {
+    font-family: var(--font-body);
+    font-size: 1em;
+    color: var(--color-text);
+    margin-bottom: var(--small-space);
+    flex-grow: 1; /* Pushes the button to the bottom of the card */
+}
+
+.primary-button {
+    /* Specification 2.4: Buttons use small spacing for padding */
+    font-size: 1.2em; 
+    padding: 0.5em 1em;
+    /* Color Update: Primary Accent for button background */
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+
+/* ----------------------------------
+ * 5. Media Queries for Responsiveness
+ * ---------------------------------- */
+
+/* -----------------
+ * Tablet Breakpoint: 720px
+ * ----------------- */
+@media (min-width: 720px) {
+    
+    /* Specification 2: Update large spacing for Tablet to 32px */
+    :root {
+        --large-space: 32px; 
+    }
+    
+    /* Specification 4.2: Update header logo size to 3em */
+    .header-logo {
+        font-size: 3em; 
+    }
+
+    .header-nav {
+        /* Navigation visible on Tablet */
+        display: flex;
+        /* Specification 2.3: Navigation options use large spacing between them */
+        gap: var(--large-space); 
+        flex-grow: 1; 
+        margin-left: var(--large-space);
+        justify-content: flex-start;
+    }
+    
+    .header-nav a {
+        color: var(--color-text);
+        text-decoration: none;
+        font-family: var(--font-heading);
+        font-size: 1.5em;
+        /* Specification 2.3: Header uses small spacing elsewhere (inner padding) */
+        padding: 0 var(--small-space); 
+    }
+
+    /* Tablet Wireframe: 2 columns */
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* -----------------
+ * Desktop Breakpoint: 1024px
+ * ----------------- */
+@media (min-width: 1024px) {
+    
+    /* Specification 2: Update large spacing for Desktop to 48px */
+    :root {
+        --large-space: 48px; 
+    }
+    
+    /* Desktop Wireframe: 3 columns */
+    .movie-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
