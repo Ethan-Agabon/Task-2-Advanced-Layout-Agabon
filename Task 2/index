@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watch.it - Advanced Layout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Teko:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="header-logo">watch.it</h1>
+        
+        <nav class="header-nav">
+            <a href="#">Movies</a>
+            <a href="#">Series</a>
+            <a href="#">Profile</a>
+        </nav>
+        
+        <button class="header-cta">Sign In</button>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>New Releases</h2>
+            
+            <section class="movie-grid">
+                
+                <article class="movie-card">
+                    <img src="assets/who-framed-roger-rabbit.jpg" alt="Poster for Who Framed Roger Rabbit" class="movie-poster">
+                    <h3 class="movie-title">Who Framed Roger Rabbit (1988)</h3>
+                    <p class="movie-info">Noir / Animation</p>
+                    <p class="movie-description">In a world where cartoons and humans coexist, a detective must solve a zany, high-stakes mystery. Packed with wild humor, groundbreaking animation, and noir twists, this unique film will pull you into a world where anything is possible!</p>
+                    <button class="primary-button">Watch Now</button>
+                </article>
+
+                <article class="movie-card">
+                    <img src="assets/hook.jpg" alt="Poster for Hook" class="movie-poster">
+                    <h3 class="movie-title">Hook (1991)</h3>
+                    <p class="movie-info">Adventure / Family</p>
+                    <p class="movie-description">Rediscover Neverland in this thrilling twist on Peter Pan! Robin Williams stars as a grown-up Peter, who must rediscover his inner child to rescue his kids from the clutches of Captain Hook. Adventure, magic, and nostalgia blend in this timeless family classic.</p>
+                    <button class="primary-button">Watch Now</button>
+                </article>
+                
+                <article class="movie-card">
+                    <img src="assets/la-la-land.jpg" alt="Poster for La La Land" class="movie-poster">
+                    <h3 class="movie-title">La La Land (2016)</h3>
+                    <p class="movie-info">Musical / Romance</p>
+                    <p class="movie-description">Love, dreams, and the magic of LA take center stage in this musical masterpiece. Watch as two starry-eyed artists navigate passion and ambition in a world where every moment feels like a cinematic spectacle!</p>
+                    <button class="primary-button">Watch Now</button>
+                </article>
+
+                <article class="movie-card">
+                    <img src="assets/hidden-figures.jpg" alt="Poster for Hidden Figures" class="movie-poster">
+                    <h3 class="movie-title">Hidden Figures (2016)</h3>
+                    <p class="movie-info">Biography / Drama</p>
+                    <p class="movie-description">Three unsung heroes of NASA's space race take the spotlight in this inspiring true story. Battling discrimination and defying the odds, these brilliant African-American women prove that intelligence, perseverance, and unity can change history and break barriers.</p>
+                    <button class="primary-button">Watch Now</button>
+                </article>
+                
+                <article class="movie-card">
+                    <img src="assets/palm-springs.jpg" alt="Poster for Palm Springs" class="movie-poster">
+                    <h3 class="movie-title">Palm Springs (2020)</h3>
+                    <p class="movie-info">Comedy / Sci-Fi</p>
+                    <p class="movie-description">A never-ending wedding day turns into an unforgettable time-loop romance! Stuck in the same day, two strangers find love, chaos, and meaning in the most unexpected ways.</p>
+                    <button class="primary-button">Watch Now</button>
+                </article>
+                
+                <article class="movie-card">
+                    <img src="assets/barbie.jpg" alt="Poster for Barbie" class="movie-poster">
+                    <h3 class="movie-title">Barbie (2023)</h3>
+                    <p class="movie-info">Adventure / Fantasy</p>
+                    <p class="movie-description">Step into the dazzling world of Barbie as she embarks on an unexpected journey from her perfect doll life to the real world. Filled with humor, heart, and empowering messages, this vibrant adventure redefines what it means to dream big!</p>
+                    <button class="primary-button">Watch Now</button>
+                </article>
+                
+            </section>
+        </div>
+    </main>
+</body>
+</html>
